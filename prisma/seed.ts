@@ -1,4 +1,4 @@
-import { PrismaClient } from "../src/generated/prisma";
+import { PrismaClient } from "@prisma/client";
 import * as bcrypt from 'bcryptjs'
 
 const prisma = new PrismaClient()
@@ -13,7 +13,7 @@ async function main(){
     //ダミー画像URL
     const dummyImages = [
         'https://picsum.photos/sees/post1/600/400',
-        'https://picsum.photos/sees/post1/600/400'
+        'https://picsum.photos/sees/post2/600/400'
     ]
 
     //ユーザー作成
@@ -32,7 +32,7 @@ async function main(){
                     },{
                         title:'2番目のブログ投稿',
                         content:'これは2つ目ののブログ投稿です。',
-                        topImage:dummyImages[0],
+                        topImage:dummyImages[1],
                         published:true
                     }
                 ]
